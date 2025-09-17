@@ -1,0 +1,129 @@
+{
+  "header": {
+    "title": "AI Tutor",
+    "english": "Ingles",
+    "arabic": "العربية",
+    "french": "Pranses",
+    "hindi": "हिंदी"
+  },
+  "nav": {
+    "home": "Bahay",
+    "aicourses": "AI Mga Kurso",
+    "aitutor": "AI Tutor",
+    "progress": "Progreso",
+    "about": "Tungkol",
+    "contact": "Kontak"
+  },
+  "hero": {
+    "badge": "AI-Powered na Plataporma sa Pagkatuto",
+    "heading": {
+      "pre": "Matutong Mag-Code kasama ang",
+      "ai": "AI-Powered",
+      "tutoring": "Pagtuturo"
+    },
+    "subheading": "Maligayang pagdating sa aming Beta! Ito ay isang open-source, hindi-para-sa-kita na proyekto na nakatuon sa pagtulong sa mga tao na matuto ng mga teknikal na kasanayan gamit ang mga AI tutor at isang hinaharap na network ng mga mentor na tao.",
+    "visualTitle": "Sesyon ng AI Tutor",
+    "code": {
+      "line1": "AI: Matutunan natin ang React hooks!",
+      "line2": "Ilagay dito ang iyong code..."
+    }
+  },
+  "buttons": {
+    "dashboard": "Pumunta sa Dashboard",
+    "startLearning": "Simulan ang Libreng Pagkatuto",
+    "demo": "Manood ng Demo",
+    "freeTrial": "Simulan ang Libreng Subok",
+    "pricing": "Tingnan ang Presyo"
+  },
+  "pillars": {
+    "ai_title": "Pagtuturong Pinapagana ng AI",
+    "ai_desc": "Makakuha ng agarang feedback at personalisadong gabay mula sa isang AI na laging handang tumulong sa iyong pag-aaral.",
+    "mentor_title": "Network ng mga Mentor",
+    "mentor_desc": "Kumonekta sa mga bihasang mentor para sa mga payo at suporta mula sa totoong mundo (paparating na).",
+    "opensource_title": "Proyektong Open Source",
+    "opensource_desc": "Binuo ng komunidad, para sa komunidad. Mag-ambag at lumago kasama namin sa aming paglalakbay."
+  },
+  "features": {
+    "heading": "Bakit Piliin ang AI Tutor?",
+    "subheading": "Danasin ang personalisadong pagkatuto gamit ang pinakabagong AI technology",
+    "0": {
+      "title": "Matalinong AI Tutor",
+      "description": "Makakuha ng mabilis at personalisadong feedback at gabay mula sa aming advanced AI tutor na nauunawaan ang iyong istilo ng pagkatuto at umaangkop sa iyong bilis."
+    },
+    "1": {
+      "title": "Adaptive Learning Path",
+      "description": "Ang aming AI ay lumikha ng custom na paglalakbay ng pagkatuto base sa iyong mga layunin, kasalukuyang kakayahan, at gustong paraan ng pagkatuto."
+    },
+    "2": {
+      "title": "Suporta ng Komunidad",
+      "description": "Sumali sa libu-libong mag-aaral sa aming sumusuportang komunidad. Ibahagi ang progreso, humingi ng tulong, at makipagtulungan sa mga proyekto."
+    },
+    "3": {
+      "title": "Mga Proyektong Pang-totoong Mundo",
+      "description": "Bumuo ng mga proyektong maipagmamalaki sa portfolio, may gabay mula sa mga eksperto sa industriya at AI-powered na pagre-review ng code."
+    },
+    "4": {
+      "title": "Pagsubaybay ng Progreso",
+      "description": "Detalyadong analytics at pagsubaybay ng progreso para manatiling motivated at makita ang iyong pag-unlad sa pagdaan ng panahon."
+    },
+    "5": {
+      "title": "24/7 na Availability",
+      "description": "Matuto sa sarili mong bilis, kahit anong oras ng araw. Palaging handang tumulong ang aming AI tutor."
+    }
+  },
+  "cta": {
+    "heading": "Handa ka na bang Simulan ang Iyong Coding Journey?",
+    "subheading": "Sumali sa libu-libong mag-aaral na nagbabago na ng kanilang karera gamit ang aming AI-powered na plataporma."
+  },
+  "footer": {
+    "company_description": "Pinalalakas ang iyong coding journey gamit ang AI-powered na pagkatuto. Paunlarin ang iyong kakayahan, palaguin ang iyong potensyal.",
+    "quick_links_title": "Mabilisang Link",
+    "learning_title": "Pagkatuto",
+    "support_title": "Suporta",
+    "stay_updated": "Manatiling Updated",
+    "newsletter_description": "Kumuha ng pinakabagong balita sa mga bagong kurso at AI learning tips",
+    "email_placeholder": "Ilagay ang iyong email",
+    "subscribe": "Mag-subscribe",
+    "all_rights_reserved": "Lahat ng karapatan ay nakalaan. Ginawa gamit ang",
+    "for_learners_worldwide": "para sa mga mag-aaral sa buong mundo.",
+    "ai_powered": "Pinapatakbo ng AI",
+    "open_source": "Open Source",
+    "community_supported": "Sinusuportahan ng Komunidad",
+    "not_for_profit": "Hindi-para-sa-Kita",
+    "home": "Bahay",
+    "ai_courses": "AI Mga Kurso",
+    "ai_tutor": "AI Tutor",
+    "progress_tracking": "Pagsubaybay ng Progreso",
+    "about_us": "Tungkol sa Amin",
+    "beginner_courses": "Mga Kurso para sa Baguhan",
+    "advanced_topics": "Advanced na Paksa",
+    "practice_problems": "Mga Practice Problem",
+    "community": "Komunidad",
+    "learning_blog": "Blog ng Pagkatuto",
+    "help_center": "Help Center",
+    "contact_us": "Kontak Kami",
+    "faq": "FAQ",
+    "privacy_policy": "Patakaran sa Privacy",
+    "terms_of_service": "Mga Tuntunin ng Serbisyo"
+  },
+  "login": {
+    "welcomeBack": "Maligayang pagbabalik!",
+    "signInToContinue": "Mag-sign in upang ipagpatuloy ang iyong pag-aaral",
+    "backToHome": "Bumalik sa Home",
+    "newToAITutor": "Bago sa AI Tutor?",
+    "createAccount": "Gumawa ng Account",
+    "signingYouIn": "Ine-sign in ka na...",
+    "redirecting": "Nire-redirect sa dashboard...",
+    "popupBlocked": "Na-block ang popup. Payagan ang popups para sa site na ito at subukang muli.",
+    "interactionInProgress": "May ibang login na kasalukuyang nangyayari.",
+    "microsoftLoginFailed": "Nabigong mag-login gamit ang Microsoft. Pakisubukang muli.",
+    "googleAuthFailed": "Nabigong mag-login gamit ang Google. Pakisubukang muli.",
+    "googleProcessError": "Hindi matagumpay ang proseso ng Google authentication",
+    "welcomeBackUser": "Maligayang pagbabalik, {{name}}!",
+    "signInWith": "Mag-sign in gamit ang"
+  },
+  "chat": {
+    "inputPlaceholder": "I-type ang iyong mensahe...",
+    "transcribing": "Isinusulat..."
+  }
+}

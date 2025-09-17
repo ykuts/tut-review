@@ -1,0 +1,328 @@
+/* src/styles/markdown-styles.css */
+
+/* Main markdown content container */
+.markdown-content {
+  line-height: 1.6;
+  color: #374151;
+}
+
+/* Headings - only center h1 and h2 */
+.markdown-content h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.markdown-content h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #374151;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.markdown-content h3 {
+  text-align: left;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #4b5563;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.markdown-content h4 {
+  text-align: left;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #6b7280;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Paragraphs */
+.markdown-content p {
+  text-align: left;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+/* Lists - left aligned with proper indentation */
+.markdown-content ul,
+.markdown-content ol {
+  text-align: left;
+  margin-left: 0;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.markdown-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.markdown-content ul li {
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.markdown-content ol li {
+  list-style-type: decimal;
+  list-style-position: outside;
+}
+
+/* Nested lists */
+.markdown-content ul ul,
+.markdown-content ol ol,
+.markdown-content ul ol,
+.markdown-content ol ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+/* Text formatting */
+.markdown-content strong {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.markdown-content em {
+  font-style: italic;
+  color: #4b5563;
+}
+
+/* Inline code */
+.markdown-content code {
+  background-color: #f3f4f6;
+  color: #1f2937;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.875rem;
+  border: 1px solid #e5e7eb;
+}
+
+/* Code blocks */
+.markdown-content pre {
+  background-color: #1f2937 !important;
+  color: #f9fafb !important;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border: 1px solid #374151;
+}
+
+.markdown-content pre code {
+  background-color: transparent !important;
+  color: inherit !important;
+  padding: 0;
+  border: none;
+  font-size: 0.875rem;
+}
+
+/* Blockquotes */
+.markdown-content blockquote {
+  border-left: 4px solid #3b82f6;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  background-color: #eff6ff;
+  font-style: italic;
+  color: #1e40af;
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+
+.markdown-content blockquote p {
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+/* Tables */
+.markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.markdown-content th,
+.markdown-content td {
+  border: 1px solid #d1d5db;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.markdown-content th {
+  background-color: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+}
+
+.markdown-content td {
+  background-color: white;
+}
+
+.markdown-content tr:nth-child(even) td {
+  background-color: #f8fafc;
+}
+
+/* Links */
+.markdown-content a {
+  color: #3b82f6;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.markdown-content a:hover {
+  color: #1d4ed8;
+}
+
+/* Horizontal rules */
+.markdown-content hr {
+  border: none;
+  border-top: 2px solid #e5e7eb;
+  margin: 2rem 0;
+}
+
+/* Images */
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1rem auto;
+  display: block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Task lists (checkboxes) */
+.markdown-content input[type="checkbox"] {
+  margin-right: 0.5rem;
+  transform: scale(1.2);
+}
+
+.markdown-content .task-list-item {
+  list-style: none;
+  margin-left: -1.5rem;
+  padding-left: 1.5rem;
+}
+
+/* Special list formatting for specific sections */
+.markdown-content li strong:first-child {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.markdown-content li code {
+  margin: 0 0.25rem;
+}
+
+/* Syntax highlighting adjustments */
+.markdown-content .hljs {
+  background: #1f2937 !important;
+  color: #f9fafb !important;
+  padding: 1rem !important;
+  border-radius: 0.5rem !important;
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important;
+}
+
+/* Better spacing for content sections */
+.markdown-content > *:first-child {
+  margin-top: 0;
+}
+
+.markdown-content > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .markdown-content {
+    font-size: 0.9rem;
+  }
+  
+  .markdown-content h1 {
+    font-size: 1.75rem;
+  }
+  
+  .markdown-content h2 {
+    font-size: 1.375rem;
+  }
+  
+  .markdown-content h3 {
+    font-size: 1.125rem;
+  }
+  
+  .markdown-content ul,
+  .markdown-content ol {
+    padding-left: 1rem;
+  }
+  
+  .markdown-content table {
+    font-size: 0.875rem;
+  }
+  
+  .markdown-content th,
+  .markdown-content td {
+    padding: 0.5rem;
+  }
+  
+  .markdown-content pre {
+    padding: 0.75rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .markdown-content {
+    color: black;
+  }
+  
+  .markdown-content a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .markdown-content pre {
+    background-color: #f5f5f5;
+    color: black;
+    border: 1px solid #ccc;
+  }
+  
+  .markdown-content blockquote {
+    background-color: #f9f9f9;
+    border-left: 4px solid #333;
+  }
+}
+
+/* Fix for syntax highlighter conflicts */
+.markdown-content .hljs,
+.markdown-content pre .hljs {
+  background: #1f2937 !important;
+  color: #f9fafb !important;
+}
+
+/* Override react-syntax-highlighter background */
+.markdown-content pre > div {
+  background: transparent !important;
+}
+
+.markdown-content pre > div > code {
+  background: transparent !important;
+}
+
+/* For Prism syntax highlighter specifically */
+.markdown-content .prism-code,
+.markdown-content .token-line {
+  background: transparent !important;
+}

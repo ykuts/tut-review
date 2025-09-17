@@ -1,0 +1,129 @@
+{
+  "header": {
+    "title": "AI Tutor",
+    "english": "English",
+    "arabic": "العربية",
+    "french": "Français",
+    "hindi": "हिंदी"
+  },
+  "nav": {
+    "home": "Home",
+    "aicourses": "AI Courses",
+    "aitutor": "AI Tutor",
+    "progress": "Progress",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "AI-Powered Learning Platform",
+    "heading": {
+      "pre": "Learn to Code with",
+      "ai": "AI-Powered",
+      "tutoring": "Tutoring"
+    },
+    "subheading": "Welcome to our Beta! This is an open-source, not-for-profit project dedicated to helping people learn technical skills with AI tutors and a growing network of human mentors.",
+    "visualTitle": "AI Tutor Session",
+    "code": {
+      "line1": "AI: Let's learn React hooks!",
+      "line2": "Your code here..."
+    }
+  },
+  "buttons": {
+    "dashboard": "Go to Dashboard",
+    "startLearning": "Start Learning Free",
+    "demo": "Watch Demo",
+    "freeTrial": "Start Free Trial",
+    "pricing": "View Pricing"
+  },
+  "pillars": {
+    "ai_title": "AI-Powered Tutoring",
+    "ai_desc": "Get instant feedback and personalized guidance from an AI that's always available to help you learn.",
+    "mentor_title": "Mentorship Network",
+    "mentor_desc": "Connect with experienced mentors for real-world advice and support (coming soon).",
+    "opensource_title": "Open Source",
+    "opensource_desc": "Built by the community, for the community. Contribute and grow with us on our journey."
+  },
+  "features": {
+    "heading": "Why Choose AI Tutor?",
+    "subheading": "Experience personalized learning powered by cutting-edge AI technology",
+    "0": {
+      "title": "Intelligent AI Tutor",
+      "description": "Get instant, personalized feedback and guidance from our advanced AI tutor that understands your learning style and adapts to your pace."
+    },
+    "1": {
+      "title": "Adaptive Learning Path",
+      "description": "Our AI creates a customized learning journey based on your goals, current skills, and preferred learning methods."
+    },
+    "2": {
+      "title": "Community Support",
+      "description": "Join thousands of learners in our supportive community. Share progress, get help, and collaborate on projects."
+    },
+    "3": {
+      "title": "Real-world Projects",
+      "description": "Build portfolio-worthy projects with guidance from industry experts and AI-powered code reviews."
+    },
+    "4": {
+      "title": "Progress Tracking",
+      "description": "Detailed analytics and progress tracking help you stay motivated and see your growth over time."
+    },
+    "5": {
+      "title": "24/7 Availability",
+      "description": "Learn at your own pace, any time of day. Our AI tutor is always ready to help when you are."
+    }
+  },
+  "cta": {
+    "heading": "Ready to Start Your Coding Journey?",
+    "subheading": "Join thousands of learners who are already transforming their careers with our AI-powered learning platform."
+  },
+  "footer": {
+    "company_description": "Empowering your coding journey with AI-powered learning. Grow your skills, bloom your potential.",
+    "quick_links_title": "Quick Links",
+    "learning_title": "Learning",
+    "support_title": "Support",
+    "stay_updated": "Stay Updated",
+    "newsletter_description": "Get the latest updates on new courses and AI learning tips",
+    "email_placeholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "all_rights_reserved": "All rights reserved. Made with",
+    "for_learners_worldwide": "for learners worldwide.",
+    "ai_powered": "AI-Powered",
+    "open_source": "Open Source",
+    "community_supported": "Community Supported",
+    "not_for_profit": "Not-for-Profit",
+    "home": "Home",
+    "ai_courses": "AI Courses",
+    "ai_tutor": "AI Tutor",
+    "progress_tracking": "Progress Tracking",
+    "about_us": "About Us",
+    "beginner_courses": "Beginner Courses",
+    "advanced_topics": "Advanced Topics",
+    "practice_problems": "Practice Problems",
+    "community": "Community",
+    "learning_blog": "Learning Blog",
+    "help_center": "Help Center",
+    "contact_us": "Contact Us",
+    "faq": "FAQ",
+    "privacy_policy": "Privacy Policy",
+    "terms_of_service": "Terms of Service"
+  },
+  "login": {
+    "welcomeBack": "Welcome Back!",
+    "signInToContinue": "Sign in to continue your learning journey",
+    "backToHome": "Back to Home",
+    "newToAITutor": "New to AI Tutor?",
+    "createAccount": "Create Account",
+    "signingYouIn": "Signing you in...",
+    "redirecting": "Redirecting to dashboard...",
+    "popupBlocked": "Popup was blocked. Please allow popups for this site and try again.",
+    "interactionInProgress": "Another login is already in progress.",
+    "microsoftLoginFailed": "Microsoft login failed. Please try again.",
+    "googleAuthFailed": "Google authentication failed. Please try again.",
+    "googleProcessError": "Failed to process Google authentication",
+    "welcomeBackUser": "Welcome back, {{name}}!",
+    "signInWith": "Sign in with"
+  },
+  "chat": {
+    "inputPlaceholder": "Type your message...",
+    "transcribing": "Transcribing..."
+  }
+}

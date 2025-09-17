@@ -1,0 +1,129 @@
+{
+  "header": {
+    "title": "AI Tutor",
+    "english": "English",
+    "arabic": "العربية",
+    "french": "Français",
+    "hindi": "हिंदी"
+  },
+  "nav": {
+    "home": "Patsamba Loyamba",
+    "aicourses": "Makalasi a AI",
+    "aitutor": "AI Mphunzitsi",
+    "progress": "Kupita Patsogolo",
+    "about": "Za Ife",
+    "contact": "Lumikizanani"
+  },
+  "hero": {
+    "badge": "Nsanja Yophunzitsira ndi AI",
+    "heading": {
+      "pre": "Phunzirani Kulemba Code ndi",
+      "ai": "AI",
+      "tutoring": "Phunziro"
+    },
+    "subheading": "Takulandilani ku Beta yathu! Iyi ndi pulojekiti yotseguka, yopanda phindu yodzipereka kuthandiza anthu kuphunzira luso laukadaulo ndi aphunzitsi a AI komanso gulu la alangizi amtsogolo.",
+    "visualTitle": "AI Mphunzitsi Misonkhano",
+    "code": {
+      "line1": "AI: Tiyeni tiphunzire za React hooks!",
+      "line2": "Lembani code yanu apa..."
+    }
+  },
+  "buttons": {
+    "dashboard": "Pitani ku Dashboard",
+    "startLearning": "Yambani Phunziro Kwaulere",
+    "demo": "Onani Zitsanzo",
+    "freeTrial": "Yambani Kuyesa Kwaulere",
+    "pricing": "Onani Mitengo"
+  },
+  "pillars": {
+    "ai_title": "Phunziro Lothandizidwa ndi AI",
+    "ai_desc": "Pezani mayankho pompopompo ndi chitsogozo chamunthu payekha kuchokera ku AI yomwe imakhalapo nthawi zonse kuti ikuthandizeni kuphunzira.",
+    "mentor_title": "Gulu la Alangizi",
+    "mentor_desc": "Lumikizanani ndi alangizi odziwa bwino ntchito kuti mupeze upangiri weniweni ndi chithandizo (zikubwera posachedwa).",
+    "opensource_title": "Pulojekiti Yotseguka",
+    "opensource_desc": "Yomangidwa ndi anthu, kwa anthu. Thandizirani ndikukula nafe paulendo wathu."
+  },
+  "features": {
+    "heading": "Chifukwa Chiyani Musankhe AI Mphunzitsi?",
+    "subheading": "Patsani mwayi wophunzira mwapadera ndi AI yamakono",
+    "0": {
+      "title": "AI Mphunzitsi Wanzeru",
+      "description": "Landirani mayankho mwachangu komanso mwapadera kuchokera kwa AI wathu amene amamvetsetsa njira yanu yophunzirira ndikusintha liwiro lanu."
+    },
+    "1": {
+      "title": "Njira Yophunzira Yokonzedwa",
+      "description": "AI yathu imapanga njira yanu yophunzirira kutengera zolinga, luso lanu komanso njira zomwe mumakonda."
+    },
+    "2": {
+      "title": "Thandizo la Gulu",
+      "description": "Lumikizanani ndi ophunzira ena ambirimbiri m'gulu lathu lothandizira. Gawani kupita patsogolo, pemphani thandizo, ndi kugwira ntchito pamapulojekiti limodzi."
+    },
+    "3": {
+      "title": "Mapulojekiti Enieni",
+      "description": "Pangani mapulojekiti omwe angakuwonetseni ndi chitsogozo cha akatswiri komanso AI yothandizira kuwunika code yanu."
+    },
+    "4": {
+      "title": "Kuwunika Kupita Patsogolo",
+      "description": "Kuwunika mwatsatanetsatane komanso kutsatira kupita patsogolo kumakuthandizani kukhala ndi chidwi komanso kuona kukula kwanu."
+    },
+    "5": {
+      "title": "Kupezeka 24/7",
+      "description": "Phunzirani nthawi iliyonse yomwe mungathe. AI mphunzitsi wathu alipo nthawi zonse."
+    }
+  },
+  "cta": {
+    "heading": "Mwakonzeka Kuyamba Ulendo Wanu wa Coding?",
+    "subheading": "Lumikizani ndi ophunzira ambiri omwe akusintha ntchito zawo ndi nsanja yathu ya AI."
+  },
+  "footer": {
+    "company_description": "Kuthandiza ulendo wanu wophunzira ndi AI. Kulitsani luso lanu, kwatulani kuthekera kwanu.",
+    "quick_links_title": "Maulalo Ofulumira",
+    "learning_title": "Phunziro",
+    "support_title": "Thandizo",
+    "stay_updated": "Khalani Ndi Zatsopano",
+    "newsletter_description": "Pezani zambiri zaposachedwa pa makalasi atsopano ndi malangizo a AI",
+    "email_placeholder": "Lowetsani imelo yanu",
+    "subscribe": "Lembetsani",
+    "all_rights_reserved": "Maulamuliro onse ndi otetezedwa. Zopangidwa ndi",
+    "for_learners_worldwide": "kwa ophunzira padziko lonse.",
+    "ai_powered": "AI Yothandizidwa",
+    "open_source": "Open Source",
+    "community_supported": "Yothandizidwa ndi Gulu",
+    "not_for_profit": "Yopanda Phindu",
+    "home": "Patsamba Loyamba",
+    "ai_courses": "Makalasi a AI",
+    "ai_tutor": "AI Mphunzitsi",
+    "progress_tracking": "Kutsata Kupita Patsogolo",
+    "about_us": "Za Ife",
+    "beginner_courses": "Makalasi Oyamba",
+    "advanced_topics": "Mitu Yovuta",
+    "practice_problems": "Mavuto a Phunziro",
+    "community": "Gulu",
+    "learning_blog": "Blogu Yophunzira",
+    "help_center": "Malo Othandizira",
+    "contact_us": "Lumikizanani nafe",
+    "faq": "Mafunso Ofunsidwa Kawirikawiri",
+    "privacy_policy": "Mfundo Zachinsinsi",
+    "terms_of_service": "Migwirizano Yogwiritsa Ntchito"
+  },
+  "login": {
+    "welcomeBack": "Takulandilani Kachiwiri!",
+    "signInToContinue": "Lowani kuti mupitilize ulendo wanu wophunzira",
+    "backToHome": "Bwererani Patsamba Loyamba",
+    "newToAITutor": "Ndinu watsopano ku AI Mphunzitsi?",
+    "createAccount": "Pangani Akaunti",
+    "signingYouIn": "Tikukulowetsani...",
+    "redirecting": "Tikukupititsani ku dashboard...",
+    "popupBlocked": "Popup yadatsekedwa. Chonde lolani popups patsambali ndikuyesanso.",
+    "interactionInProgress": "Login ina ili mkati.",
+    "microsoftLoginFailed": "Microsoft login yalephera. Chonde yesaninso.",
+    "googleAuthFailed": "Google login yalephera. Chonde yesaninso.",
+    "googleProcessError": "Zalephera kulowetsa Google authentication",
+    "welcomeBackUser": "Takulandilani, {{name}}!",
+    "signInWith": "Lowani ndi"
+  },
+  "chat": {
+    "inputPlaceholder": "Lembani uthenga wanu...",
+    "transcribing": "Kusindikiza..."
+  }
+}

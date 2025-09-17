@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="AI-Tutor Web App" />
+  <title>AI-Tutor</title>
+  <!-- Favicons and related links -->
+  <link rel="icon" href="/favicons/favicon-96x96.png" />
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" /> -->
+  <meta name="apple-mobile-web-app-title" content="AI-Tutor" />
+  <link rel="manifest" href="/favicons/site.webmanifest" />
+  <link rel="stylesheet" href="https://testaida.iverse.space/aida-widget.css">
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!-- AIDA Widget container -->
+  <div id="aida-widget-container"></div>
+
+  <!-- AIDA Widget JavaScript -->
+  <script src="https://testaida.iverse.space/aida-widget.umd.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.AidaWidget) {
+        AidaWidget.render("#aida-widget-container", {
+          language: 'en',
+          user: { email: 'demo@example.com' },
+          translations: {
+            transcribing: 'Transcribing...',
+            inputPlaceholder: 'Type a message to Aida...'
+          }
+        });
+      }
+    });
+  </script>
+  <!-- This is the only script tag Vite wants! -->
+  <script type="module" src="/src/index.jsx"></script>
+</body>
+
+</html>

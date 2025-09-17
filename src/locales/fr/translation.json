@@ -1,0 +1,129 @@
+{
+  "header": {
+    "title": "AI Tutor",
+    "english": "English",
+    "arabic": "العربية",
+    "french": "Français",
+    "hindi": "हिंदी"
+  },
+  "nav": {
+    "home": "Accueil",
+    "aicourses": "Cours d’IA",
+    "aitutor": "Tuteur IA",
+    "progress": "Progression",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Plateforme d’apprentissage propulsée par l’IA",
+    "heading": {
+      "pre": "Apprenez à coder avec",
+      "ai": "l’IA",
+      "tutoring": "comme tuteur"
+    },
+    "subheading": "Bienvenue à notre version Bêta ! Il s'agit d'un projet open-source et à but non lucratif dédié à aider les gens à acquérir des compétences techniques avec des tuteurs IA et un futur réseau de mentors humains.",
+    "visualTitle": "Session Tuteur IA",
+    "code": {
+      "line1": "IA : Apprenons les hooks de React !",
+      "line2": "Votre code ici…"
+    }
+  },
+  "buttons": {
+    "dashboard": "Aller au tableau de bord",
+    "startLearning": "Commencer gratuitement",
+    "demo": "Voir la démo",
+    "freeTrial": "Essayer gratuitement",
+    "pricing": "Voir les tarifs"
+  },
+  "pillars": {
+    "ai_title": "Tutorat par l'IA",
+    "ai_desc": "Obtenez des retours instantanés et des conseils personnalisés d'une IA toujours disponible pour vous aider à apprendre.",
+    "mentor_title": "Réseau de mentors",
+    "mentor_desc": "Connectez-vous avec des mentors expérimentés pour des conseils et un soutien concrets (bientôt disponible).",
+    "opensource_title": "Projet Open Source",
+    "opensource_desc": "Construit par la communauté, pour la communauté. Contribuez et grandissez avec nous dans notre aventure."
+  },
+  "features": {
+    "heading": "Pourquoi choisir Tuteur IA ?",
+    "subheading": "Profitez d’un apprentissage personnalisé grâce à une IA de pointe",
+    "0": {
+      "title": "Tuteur IA intelligent",
+      "description": "Recevez des retours instantanés et personnalisés ainsi que des conseils de notre tuteur IA qui comprend votre façon d’apprendre et s’adapte à votre rythme."
+    },
+    "1": {
+      "title": "Parcours d’apprentissage adaptatif",
+      "description": "Notre IA crée un parcours d’apprentissage personnalisé selon vos objectifs, vos compétences actuelles et vos méthodes préférées."
+    },
+    "2": {
+      "title": "Communauté de soutien",
+      "description": "Rejoignez des milliers d’apprenants dans notre communauté bienveillante. Partagez vos progrès, trouvez de l’aide, collaborez sur des projets."
+    },
+    "3": {
+      "title": "Projets concrets",
+      "description": "Réalisez des projets dignes d’un portfolio avec l’aide d’experts du secteur et des relectures de code par l’IA."
+    },
+    "4": {
+      "title": "Suivi des progrès",
+      "description": "Des analyses détaillées et un suivi de vos progrès pour vous motiver et visualiser votre évolution."
+    },
+    "5": {
+      "title": "Disponible 24h/24, 7j/7",
+      "description": "Apprenez à votre rythme, à toute heure. Notre tuteur IA est toujours là pour vous."
+    }
+  },
+  "cta": {
+    "heading": "Prêt(e) à commencer votre aventure dans le code ?",
+    "subheading": "Rejoignez des milliers d’apprenants qui transforment déjà leur carrière grâce à notre plateforme alimentée par l’IA."
+  },
+  "footer": {
+    "company_description": "Soutenez votre parcours en programmation grâce à l’apprentissage propulsé par l’IA. Développez vos compétences, révélez votre potentiel.",
+    "quick_links_title": "Liens rapides",
+    "learning_title": "Apprentissage",
+    "support_title": "Support",
+    "stay_updated": "Restez informé(e)",
+    "newsletter_description": "Recevez les dernières nouveautés sur les cours et des conseils d’apprentissage de l’IA",
+    "email_placeholder": "Entrez votre e-mail",
+    "subscribe": "S’abonner",
+    "all_rights_reserved": "Tous droits réservés. Réalisé avec",
+    "for_learners_worldwide": "pour les apprenants du monde entier.",
+    "ai_powered": "Propulsé par l’IA",
+    "open_source": "Open Source",
+    "community_supported": "Soutenu par la communauté",
+    "not_for_profit": "À but non lucratif",
+    "home": "Accueil",
+    "ai_courses": "Cours d’IA",
+    "ai_tutor": "Tuteur IA",
+    "progress_tracking": "Suivi des progrès",
+    "about_us": "À propos de nous",
+    "beginner_courses": "Cours débutants",
+    "advanced_topics": "Sujets avancés",
+    "practice_problems": "Exercices pratiques",
+    "community": "Communauté",
+    "learning_blog": "Blog d’apprentissage",
+    "help_center": "Centre d’aide",
+    "contact_us": "Nous contacter",
+    "faq": "FAQ",
+    "privacy_policy": "Politique de confidentialité",
+    "terms_of_service": "Conditions d’utilisation"
+  },
+  "login": {
+    "welcomeBack": "Bon retour !",
+    "signInToContinue": "Connectez-vous pour poursuivre votre apprentissage",
+    "backToHome": "Retour à l'accueil",
+    "newToAITutor": "Nouveau sur AI Tutor ?",
+    "createAccount": "Créer un compte",
+    "signingYouIn": "Connexion en cours...",
+    "redirecting": "Redirection vers le tableau de bord...",
+    "popupBlocked": "La fenêtre contextuelle a été bloquée. Veuillez autoriser les pop-ups pour ce site et réessayer.",
+    "interactionInProgress": "Une autre connexion est déjà en cours.",
+    "microsoftLoginFailed": "Échec de la connexion Microsoft. Veuillez réessayer.",
+    "googleAuthFailed": "Échec de l'authentification Google. Veuillez réessayer.",
+    "googleProcessError": "Erreur lors du traitement de l'authentification Google",
+    "welcomeBackUser": "Bon retour, {{name}} !",
+    "signInWith": "Se connecter avec"
+  },
+  "chat": {
+    "inputPlaceholder": "Tapez votre message...",
+    "transcribing": "Transcription en cours..."
+  }
+}
