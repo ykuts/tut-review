@@ -3,7 +3,7 @@ import { Disclosure, Menu } from "@headlessui/react";
 import { Link, useNavigate } from "react-router-dom";
 import { useMsal } from "@azure/msal-react";
 import { useAuth } from '../contexts/AuthContext';
-import { HiSparkles } from "react-icons/hi2";
+import { HiSparkles, HiArrowRightOnRectangle, HiUserCircle } from "react-icons/hi2";
 import { GlobeAltIcon, ChevronDownIcon } from '@heroicons/react/24/solid';
 import clsx from "clsx";
 import { useTranslation } from 'react-i18next';
@@ -20,7 +20,7 @@ const LANGUAGES = [
 ];
 
 const navigation = [
-  { name: "Home", href: "/", current: true },
+  { name: "Home", href: "/", current: false },
   { name: "AI Courses", href: "/courses", current: false },
   { name: "AI Tutor", href: "/tutor", current: false },
   { name: "Progress", href: "/progress", current: false },
@@ -33,6 +33,23 @@ const Header = () => {
   const { user, isAuthenticated, authProvider, logout } = useAuth();
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
+
+  // Handle logout
+  const handleSignOut = () => {
+    if (authProvider === 'microsoft') {
+      instance.logoutPopup().then(() => {
+        logout();
+        navigate('/');
+      }).catch(error => {
+        console.error('Microsoft logout failed:', error);
+        logout();
+        navigate('/');
+      });
+    } else {
+      logout();
+      navigate('/');
+    }
+  };
 
   // Replace static navigation names with translations
   const translatedNavigation = navigation.map((item) => ({
@@ -56,117 +73,222 @@ const Header = () => {
                 </Link>
               </div>
 
-              {/* Navigation and Language Dropdown in one flex row */}
-              <div className="hidden md:flex items-center">
-                <div className="ml-10 flex items-center space-x-8">
+              {/* Navigation and Auth Section */}
+              <div className="hidden md:flex items-center space-x-8">
+                {/* Navigation Links */}
+                <div className="flex items-center space-x-8">
                   {translatedNavigation.map((item) => (
                     <Link
                       key={item.href}
                       to={item.href}
-                      className={clsx(
-                        "relative px-3 py-2 text-sm font-medium transition-colors duration-200 group",
-                        item.current
-                          ? "text-[#FF5F90]"
-                          : "text-gray-700 hover:text-[#FF5F90]"
-                      )}
+                      className="text-gray-700 hover:text-[#FF5F90] px-3 py-2 text-sm font-medium transition-colors duration-200"
                     >
                       {item.name}
-                      <span className="absolute inset-x-0 bottom-0 h-0.5 bg-[#FF5F90] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200" />
                     </Link>
                   ))}
+                </div>
 
-                  {/* Language Dropdown  */}
-                  <Menu as="div" className="relative inline-block text-left">
-                    <Menu.Button className="inline-flex items-center px-3 py-2 rounded-full bg-white border border-gray-300 shadow-sm hover:shadow transition text-sm font-medium text-gray-900 ml-2">
-                      <GlobeAltIcon className="w-5 h-5 text-[#FF5F90] mr-2" />
-                      <span>
-                        {LANGUAGES.find(l => l.code === i18n.language)?.label || 'Language'}
-                      </span>
-                      <ChevronDownIcon className="w-4 h-4 ml-2 text-gray-500" />
-                    </Menu.Button>
-                    <Menu.Items className="absolute right-0 mt-2 w-48 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
-                      <div className="py-1">
-                        {LANGUAGES.map(lang => (
-                          <Menu.Item key={lang.code}>
+                {/* Language Dropdown */}
+                <Menu as="div" className="relative">
+                  <Menu.Button className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-[#FF5F90] transition-colors duration-200">
+                    <GlobeAltIcon className="w-4 h-4" />
+                    <span>{LANGUAGES.find(lang => lang.code === i18n.language)?.nativeLabel || 'English'}</span>
+                    <ChevronDownIcon className="w-3 h-3" />
+                  </Menu.Button>
+                  <Menu.Items className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
+                    <div className="py-1">
+                      {LANGUAGES.map((language) => (
+                        <Menu.Item key={language.code}>
+                          {({ active }) => (
+                            <button
+                              onClick={() => i18n.changeLanguage(language.code)}
+                              className={clsx(
+                                active ? 'bg-gray-100' : '',
+                                i18n.language === language.code ? 'text-[#FF5F90] font-medium' : 'text-gray-700',
+                                'block px-4 py-2 text-sm w-full text-left'
+                              )}
+                            >
+                              {language.nativeLabel}
+                            </button>
+                          )}
+                        </Menu.Item>
+                      ))}
+                    </div>
+                  </Menu.Items>
+                </Menu>
+
+                {/* Auth Section */}
+                {isAuthenticated ? (
+                  <div className="flex items-center space-x-4">
+                    {/* Dashboard Link */}
+                    <Link
+                      to="/dashboard"
+                      className="flex items-center space-x-2 px-4 py-2 bg-[#FF5F90] text-white rounded-lg hover:bg-red-600 transition-colors duration-200"
+                    >
+                      <HiUserCircle className="w-4 h-4" />
+                      <span>Dashboard</span>
+                    </Link>
+
+                    {/* User Menu */}
+                    <Menu as="div" className="relative">
+                      <Menu.Button className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">
+                        <div className="w-8 h-8 bg-gradient-to-br from-[#FF5F90] to-red-500 rounded-full flex items-center justify-center">
+                          {user?.picture ? (
+                            <img 
+                              src={user.picture} 
+                              alt={user.name}
+                              className="w-8 h-8 rounded-full object-cover"
+                            />
+                          ) : (
+                            <span className="text-white text-sm font-medium">
+                              {user?.name?.split(' ').map(n => n[0]).join('') || 'U'}
+                            </span>
+                          )}
+                        </div>
+                        <span className="hidden lg:block">{user?.name || 'User'}</span>
+                        <ChevronDownIcon className="w-3 h-3" />
+                      </Menu.Button>
+                      
+                      <Menu.Items className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
+                        <div className="py-1">
+                          <div className="px-4 py-2 border-b border-gray-100">
+                            <p className="text-sm font-medium text-gray-900">{user?.name}</p>
+                            <p className="text-xs text-gray-500">{user?.email}</p>
+                            {user?.role?.includes('mentor') && (
+                              <span className="inline-flex items-center px-2 py-1 mt-1 text-xs bg-blue-100 text-blue-800 rounded-full">
+                                Mentor
+                              </span>
+                            )}
+                          </div>
+                          
+                          <Menu.Item>
                             {({ active }) => (
-                              <button
-                                onClick={() => {
-                                  i18n.changeLanguage(lang.code);
-                                  localStorage.setItem('siteLanguage', lang.code);
-                                }}
+                              <Link
+                                to="/dashboard"
                                 className={clsx(
-                                  'flex items-center w-full px-4 py-2 text-sm text-left rounded-md transition',
-                                  active
-                                    ? 'bg-[#FF5F90]/10 text-[#FF5F90]'
-                                    : 'text-gray-900',
-                                  i18n.language === lang.code && 'font-bold'
+                                  active ? 'bg-gray-100' : '',
+                                  'block px-4 py-2 text-sm text-gray-700'
                                 )}
                               >
-                                <span>{lang.label}</span>
-                                {lang.nativeLabel !== lang.label && (
-                                  <span className="ml-2 text-xs text-gray-400">{lang.nativeLabel}</span>
+                                <HiUserCircle className="w-4 h-4 inline mr-2" />
+                                Dashboard
+                              </Link>
+                            )}
+                          </Menu.Item>
+                          
+                          <Menu.Item>
+                            {({ active }) => (
+                              <button
+                                onClick={handleSignOut}
+                                className={clsx(
+                                  active ? 'bg-gray-100' : '',
+                                  'block px-4 py-2 text-sm text-gray-700 w-full text-left'
                                 )}
+                              >
+                                <HiArrowRightOnRectangle className="w-4 h-4 inline mr-2" />
+                                Sign Out
                               </button>
                             )}
                           </Menu.Item>
-                        ))}
-                      </div>
-                    </Menu.Items>
-                  </Menu>
-                </div>
-              </div>
-
-              {/* Desktop Action Buttons */}
-              <div className="hidden md:flex items-center space-x-4">
-                {/* ... any additional action buttons ... */}
+                        </div>
+                      </Menu.Items>
+                    </Menu>
+                  </div>
+                ) : (
+                  <div className="flex items-center space-x-4">
+                    <Link
+                      to="/login"
+                      className="text-gray-700 hover:text-[#FF5F90] px-3 py-2 text-sm font-medium transition-colors duration-200"
+                    >
+                      Sign In
+                    </Link>
+                    <Link
+                      to="/signup"
+                      className="px-4 py-2 bg-[#FF5F90] text-white rounded-lg hover:bg-red-600 transition-colors duration-200"
+                    >
+                      Sign Up
+                    </Link>
+                  </div>
+                )}
               </div>
 
               {/* Mobile menu button */}
               <div className="md:hidden">
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-[#FF5F90] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#FF5F90]">
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#FF5F90]">
                   <span className="sr-only">Open main menu</span>
-                  <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                  </svg>
+                  {/* Add mobile menu icon here if needed */}
                 </Disclosure.Button>
               </div>
             </div>
           </div>
 
-          {/* Mobile Navigation Panel */}
-          <Disclosure.Panel className="md:hidden bg-white border-t border-gray-200">
-            <div className="space-y-1 px-4 py-3">
+          {/* Mobile menu */}
+          <Disclosure.Panel className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {translatedNavigation.map((item) => (
                 <Link
                   key={item.href}
                   to={item.href}
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#FF5F90] hover:bg-[#FF5F90]/10"
+                  className="text-gray-700 hover:text-[#FF5F90] block px-3 py-2 text-base font-medium"
                 >
                   {item.name}
                 </Link>
               ))}
-
-              {/* Language Dropdown (Mobile) */}
-              <div className="mt-4 border-t pt-3">
-                {LANGUAGES.map(lang => (
-                  <button
-                    key={lang.code}
-                    onClick={() => {
-                      i18n.changeLanguage(lang.code);
-                      localStorage.setItem('siteLanguage', lang.code);
-                    }}
-                    className={clsx(
-                      'flex items-center w-full px-3 py-2 text-sm rounded-md text-gray-700 hover:text-[#FF5F90]',
-                      i18n.language === lang.code && 'font-bold text-[#FF5F90]'
-                    )}
+              
+              {isAuthenticated ? (
+                <div className="border-t border-gray-200 pt-4 pb-3">
+                  <div className="flex items-center px-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-10 h-10 bg-gradient-to-br from-[#FF5F90] to-red-500 rounded-full flex items-center justify-center">
+                        {user?.picture ? (
+                          <img 
+                            src={user.picture} 
+                            alt={user.name}
+                            className="w-10 h-10 rounded-full object-cover"
+                          />
+                        ) : (
+                          <span className="text-white font-medium">
+                            {user?.name?.split(' ').map(n => n[0]).join('') || 'U'}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    <div className="ml-3">
+                      <div className="text-base font-medium text-gray-800">{user?.name}</div>
+                      <div className="text-sm font-medium text-gray-500">{user?.email}</div>
+                    </div>
+                  </div>
+                  <div className="mt-3 px-2 space-y-1">
+                    <Link
+                      to="/dashboard"
+                      className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#FF5F90]"
+                    >
+                      Dashboard
+                    </Link>
+                    <button
+                      onClick={handleSignOut}
+                      className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#FF5F90] w-full text-left"
+                    >
+                      Sign Out
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div className="border-t border-gray-200 pt-4 pb-3">
+                  <Link
+                    to="/login"
+                    className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#FF5F90]"
                   >
-                    {lang.label}
-                    {lang.nativeLabel !== lang.label && (
-                      <span className="ml-2 text-xs text-gray-400">{lang.nativeLabel}</span>
-                    )}
-                  </button>
-                ))}
-              </div>
+                    Sign In
+                  </Link>
+                  <Link
+                    to="/signup"
+                    className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#FF5F90]"
+                  >
+                    Sign Up
+                  </Link>
+                </div>
+              )}
             </div>
           </Disclosure.Panel>
         </>
