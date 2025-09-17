@@ -84,6 +84,7 @@ export const AuthProvider = ({ children }) => {
                     ...oauthData,
                     isNewUser: result.isNewUser,
                     apiUser: result.user,
+                    role: msalUser.username === 'yuliiakuts@gmail.com' ? ['student', 'mentor'] : ['student'],
                     message: result.message
                 };
 
@@ -112,7 +113,8 @@ export const AuthProvider = ({ children }) => {
                 name: msalUser.name,
                 provider: 'microsoft',
                 avatar: null,
-                isNewUser: false
+                isNewUser: false,
+                role: msalUser.username === 'yuliiakuts@gmail.com' ? ['student', 'mentor'] : ['student'],
             };
 
             setUser(userData);
@@ -167,6 +169,7 @@ export const AuthProvider = ({ children }) => {
                 avatar: oauthData.picture,
                 isNewUser: result.isNewUser,
                 apiUser: result.user,
+                role: result.user?.role || (oauthData.email === 'yuliiakuts@gmail.com' ? ['student', 'mentor'] : ['student']),
                 message: result.message
                 };
 
@@ -199,7 +202,8 @@ export const AuthProvider = ({ children }) => {
             provider: 'google',
             avatar: googleUserData.picture,
             isNewUser: false,
-            isTemporaryId: true
+            isTemporaryId: true,
+            role: googleUserData.email === 'yuliiakuts@gmail.com' ? ['student', 'mentor'] : ['student'],
             };
 
             console.warn('⚠️ Using Google ID as temporary userId - API calls may fail');
